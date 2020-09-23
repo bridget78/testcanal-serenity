@@ -1,7 +1,0 @@
--------------------------------------------------------------------------------
-Test set: org.example.acceptancetests.AcceptanceTestSuite
--------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 77.428 s <<< FAILURE! - in org.example.acceptancetests.AcceptanceTestSuite
-Modifier l'adresse d'un abonne.Modification de l'adresse d'un abonné résidant en France sans ou avec date d'effet #1  Time elapsed: 13.865 s  <<< FAILURE!
-java.lang.AssertionError: expected:<0> but was:<1>
-

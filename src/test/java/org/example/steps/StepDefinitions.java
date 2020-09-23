@@ -11,7 +11,6 @@ import net.thucydides.core.annotations.Steps;
 //import cucumber.api.java.en.Then;
 //import cucumber.api.java.en.When;
 
-import org.example.app.Calculator;
 import org.example.model.Address;
 import org.example.model.AddressStatus;
 import org.example.model.Channel;
@@ -21,7 +20,7 @@ import org.junit.Assert;
 
 import java.io.IOException;
 
-public class MathsStepDefinitions {
+public class StepDefinitions {
 
     private Subscriber subscriber;
 
