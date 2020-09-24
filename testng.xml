@@ -1,10 +1,13 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="BDD Test Suite" verbose="1" parallel="tests" thread-count="1" configfailurepolicy="continue">
-    <test name="Login and Update Profile Test" annotations="JDK" preserve-order="true">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/Carine Nguyen/IdeaProjects/testcanal-serenity">
         <classes>
-            <class name="AcceptanceTestSuite"/>
+            <class name="org.example.acceptancetests.AcceptanceTestSuite">
+                <methods>
+                    <include name="feature"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>
