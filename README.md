@@ -23,4 +23,4 @@ Echecs:
 
 Le MockServer ne répond pas.
 
-Le fichier DTD associé à testng.xml n'est pas chargé, de erreurs se produisent même en spécifiant sa copie locale.
+Le fichier DTD associé à testng.xml n'est pas chargé, et des erreurs se produisent même en spécifiant sa copie locale.
