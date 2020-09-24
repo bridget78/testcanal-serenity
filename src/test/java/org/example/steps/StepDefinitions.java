@@ -4,6 +4,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.example.model.*;
+import org.example.services.ManagementService;
 import org.example.services.OperatorService;
 import org.example.services.SubscriberService;
 import org.junit.Assert;
@@ -47,14 +48,11 @@ public class StepDefinitions {
 
     @Then("un mouvement de modification d'adresse est créé")
     public void movAddrModifCreated() {
-        // TODO: Retrieve the movement data
         Address mainAddr = subscriber.getMainAddress();
+        Movement mov = ManagementService.getLastMovement(operatorId, subscriber.getSubscriberId(), (mainAddr.getAddressStatus() == AddressStatus.ACTIVE));
 
-        if (mainAddr.getAddressStatus() == AddressStatus.INACTIVE) {
-            Assert.assertEquals(0, 1);
-        } else {
-            Assert.assertEquals(1, 1);
-        }
+        Assert.assertNotNull(mov);
+        Assert.assertEquals(mov.getMovType(), MovementType.MODIF_ADDR);
     }
 
 }

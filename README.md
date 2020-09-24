@@ -38,4 +38,4 @@ Package **org.example.services**: Classes de service qui interrogent le MockServ
 
 Le MockServer ne répond pas.
 
-Le fichier DTD associé à testng.xml n'est pas chargé, et des erreurs se produisent même en spécifiant sa copie locale.
+Le fichier DTD associé à _testng.xml_ n'est pas chargé, et des erreurs se produisent même en spécifiant sa copie locale.
