@@ -22,6 +22,8 @@ Dans le panneau d'exploration du projet, faire un clic droit sur le fichier test
 
 **pom.xml**
 
+**src/test/resources/features**: Scénarios de test.
+
 **org.example.acceptancetests.AcceptanceTestSuite**: La série de tests.
 
 **org.example.steps.StepDefinitions**: Les étapes du cas de test.

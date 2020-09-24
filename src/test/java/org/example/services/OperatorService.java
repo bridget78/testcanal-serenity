@@ -9,6 +9,7 @@ public class OperatorService {
         Operator operator = new Operator(3);
         operator.setFirstName("William");
         operator.setLastName("Lessing");
+        return operator;
     }
 
     public static void login(Operator operator, Channel channel) {
