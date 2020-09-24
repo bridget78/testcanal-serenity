@@ -3,18 +3,8 @@ package org.example.steps;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import net.thucydides.core.annotations.Steps;
-//import static org.assertj.core.api.Assertions.assertThat;
-
-//import cucumber.api.PendingException;
-//import cucumber.api.java.en.Given;
-//import cucumber.api.java.en.Then;
-//import cucumber.api.java.en.When;
-
-import org.example.model.Address;
-import org.example.model.AddressStatus;
-import org.example.model.Channel;
-import org.example.model.Subscriber;
+import org.example.model.*;
+import org.example.services.OperatorService;
 import org.example.services.SubscriberService;
 import org.junit.Assert;
 
@@ -33,7 +23,9 @@ public class StepDefinitions {
 
     @When("le conseiller connecté a {word} modifie l'adresse de l'abonné")
     public void conseillerModifAdr(String word) {
-        this.operatorId = 3;
+        Operator operator = OperatorService.buildOperatorFromId(3);
+        OperatorService.login(operator, new Channel(word));
+
         Address oldMainAddr = subscriber.getMainAddress();
         Address newAddress = new Address();
         newAddress.setAddrId(oldMainAddr.getAddrId());
